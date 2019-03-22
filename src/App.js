@@ -9,16 +9,16 @@ class App extends Component {
     }
 
     callMetro = () => {
-        axios.get('https://api.wmata.com/StationPrediction.svc/json/GetPrediction/B03', {
+        axios.get('https://api.wmata.com/StationPrediction.svc/json/GetPrediction/A01', {
             headers: {
                 "api_key": String(process.env.REACT_APP_METRO_KEY)
             }
         })
         .then(res => {
             this.setState({
-                metroData: res.data.Trains
+                metroData: res.data
             })
-            console.log(this.state.metroData);
+            console.log(this.state.metroData.Trains);
         })
     }
 
