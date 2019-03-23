@@ -7,7 +7,7 @@ class App extends Component {
 
     state = {
         metroData: [],
-        trainId: ""
+        pluralTrains: ""
     }
 
     // callMetro = () => {
@@ -37,10 +37,11 @@ class App extends Component {
             console.log(this.state.metroData);
             // works to here
 
-            let trainId = this.state.metroData.map(train => {
-                console.log(trainId); //undefined
-                console.log(train); //return each train
-                // need to map through each returned train to get to TrainId
+            this.state.metroData.map(train => {
+                this.setState({
+                    pluralTrains: train.TrainId
+                })
+                console.log(this.state.pluralTrains);
             })
         })
     }
@@ -52,11 +53,11 @@ class App extends Component {
 
         <button onClick={this.callMetro}>Submit</button>
 
-        {this.state.metroData.map(index => (
-            <Trains
-                key={index}
-            />
-        ))}
+        {/* <Trains
+            key={this.state.trainId}    
+        /> */}
+
+        {/* {this.state.trainId.map} */}
 
       </div>
     );
