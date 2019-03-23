@@ -1,11 +1,12 @@
 import React from 'react';
 import train from "./train.png";
+import "./Trains.css";
 
 const Trains = (props) => {
 
     return (
 
-        <div>
+        <div className="trains">
             <img 
                 src={train} 
                 alt="train" 
