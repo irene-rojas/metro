@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from "axios";
+import Trains from "./Trains/Trains";
 
 class App extends Component {
 
@@ -16,9 +17,9 @@ class App extends Component {
         })
         .then(res => {
             this.setState({
-                metroData: res.data
+                metroData: res.data.Trains
             })
-            console.log(this.state.metroData.Trains);
+            console.log(this.state.metroData);
         })
     }
 
@@ -28,6 +29,12 @@ class App extends Component {
       <div className="App">
 
         <button onClick={this.callMetro}>Submit</button>
+
+
+
+        <Trains />
+
+
 
       </div>
     );
