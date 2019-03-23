@@ -6,18 +6,33 @@ import Trains from "./Trains/Trains";
 class App extends Component {
 
     state = {
-        metroData: []
+        metroData: [],
+        individualTrains: []
     }
 
+    // callMetro = () => {
+    //     axios.get('https://api.wmata.com/TrainPositions/TrainPositions?contentType=json', {
+    //         headers: {
+    //             "api_key": String(process.env.REACT_APP_METRO_KEY)
+    //         }
+    //     })
+    //     .then(res => {
+    //         this.setState({
+    //             metroData: res.data.TrainPositions,
+    //         })
+    //         console.log(this.state.metroData);
+    //     })
+    // }
+
     callMetro = () => {
-        axios.get('https://api.wmata.com/StationPrediction.svc/json/GetPrediction/A01', {
+        axios.get('https://api.wmata.com/TrainPositions/TrainPositions?contentType=json', {
             headers: {
                 "api_key": String(process.env.REACT_APP_METRO_KEY)
             }
         })
         .then(res => {
             this.setState({
-                metroData: res.data.Trains
+                metroData: res.data.TrainPositions,
             })
             console.log(this.state.metroData);
         })
@@ -30,11 +45,13 @@ class App extends Component {
 
         <button onClick={this.callMetro}>Submit</button>
 
-
-
-        <Trains />
-
-
+        {this.state.metroData.map(train => (
+            <Trains 
+                key={train.TrainId}
+                trainId={train.TrainId}
+                line={train.LineCode}
+            />
+        ))}
 
       </div>
     );
