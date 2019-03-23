@@ -35,15 +35,6 @@ class App extends Component {
                 metroData: res.data.TrainPositions,
             })
             console.log(this.state.metroData);
-            // works to here
-
-            this.state.metroData.map(train => {
-                this.setState({
-                    individualTrains: train
-                })
-                console.log(this.state.individualTrains);
-            });
-            
         })
     }
 
@@ -54,10 +45,13 @@ class App extends Component {
 
         <button onClick={this.callMetro}>Submit</button>
 
-        {/* {this.state.individualTrains.map(train => {
+        {this.state.metroData.map(train => (
             <Trains 
+                key={train.TrainId}
+                trainId={train.TrainId}
+                line={train.LineCode}
             />
-        })} */}
+        ))}
 
       </div>
     );

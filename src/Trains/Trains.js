@@ -9,8 +9,14 @@ const Trains = (props) => {
             <img 
                 src={train} 
                 alt="train" 
-                width="200px" 
+                width="150px" 
             />
+            <br/>
+            Train ID: {props.trainId}
+            <br/>
+            Line Color: {props.line}
+            <br/>
+            No line color = out of service.
         </div>
 
     )
