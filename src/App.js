@@ -149,7 +149,7 @@ class App extends Component {
 
             <button onClick={this.onSubmit}>Submit</button>
                 <br/>
-            Metro API might not display arrival information for final stations.
+            Note: Metro API might not display arrival information for final stations.
 
         </div>
 
