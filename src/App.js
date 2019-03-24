@@ -183,8 +183,6 @@ class App extends Component {
         {/* </div>   */}
 
         <div className="wmataName">
-            Washington Metropolitan Area Transit Authority
-            <br/>
             Powered by <a href="https://developer.wmata.com/">WMATA API</a>
         </div>
 
