@@ -46,10 +46,10 @@ class App extends Component {
                 <h1>Where's The Train?</h1>
             </div>
 
-            <div className="logo">
+            {/* <div className="logo">
                 <img id="metroLogo" src={logo} alt="wmata logo"/>
                 Washington Metropolitan Area Transit Authority
-            </div>
+            </div> */}
 
         </div>
 
@@ -172,6 +172,7 @@ class App extends Component {
         {this.state.metroData.map((train, index) => {
             return (
                 <Trains 
+                    className="trainArrivals"
                     key={index}
                     line={train.Line}
                     destination={train.DestinationName}
