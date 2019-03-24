@@ -42,14 +42,11 @@ class App extends Component {
 
         <div className="header">
 
-            <div className="whereTrain">
-                <h1>Where's The Train?</h1>
-            </div>
+            <h1 className="whereTrain">Where's The Train?</h1>
 
-            {/* <div className="logo">
-                <img id="metroLogo" src={logo} alt="wmata logo"/>
-                Washington Metropolitan Area Transit Authority
-            </div> */}
+            <a href="https://www.wmata.com/"><img id="metroLogo" src={logo} alt="wmata logo"/></a>
+
+            
 
         </div>
 
@@ -153,10 +150,6 @@ class App extends Component {
 
                 </select>
                 <br/>
-
-                <button onClick={this.onSubmit}>Submit</button>
-
-                <br/>
                 <div id="apiNote">
                     Note: May not display arrival information for final stations. 
                     <br/>
@@ -164,6 +157,8 @@ class App extends Component {
                 </div>
 
             </form>
+
+            <button onClick={this.onSubmit}>Submit</button>
 
 
         </div>
@@ -182,6 +177,14 @@ class App extends Component {
                 />
             )
         })}
+
+
+        <p id="wmataName">Washington Metropolitan Area Transit Authority
+            <br/>
+            Powered by <a href="https://developer.wmata.com/">WMATA API</a>
+        </p>
+
+
 
       </div>
     );
