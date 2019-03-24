@@ -1,3 +1,9 @@
 .trains {
     border: 1px solid black;
+    width: 200px;
+    border-radius: 25px;
+}
+
+img {
+    width: 50px;
 }
