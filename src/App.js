@@ -13,15 +13,32 @@ class App extends Component {
     //     this.callMetro();
     // }
 
+    // train positions api
+    // callMetro = () => {
+    //     axios.get('https://api.wmata.com/TrainPositions/TrainPositions?contentType=json', {
+    //         headers: {
+    //             "api_key": String(process.env.REACT_APP_METRO_KEY)
+    //         }
+    //     })
+    //     .then(res => {
+    //         this.setState({ 
+    //             metroData: res.data.TrainPositions,
+    //         })
+    //         console.log(this.state.metroData);
+    //     })
+    // }
+
+
+    // train predictions api
     callMetro = () => {
-        axios.get('https://api.wmata.com/TrainPositions/TrainPositions?contentType=json', {
+        axios.get('https://api.wmata.com/StationPrediction.svc/json/GetPrediction/C13', {
             headers: {
                 "api_key": String(process.env.REACT_APP_METRO_KEY)
             }
         })
         .then(res => {
-            this.setState({ 
-                metroData: res.data.TrainPositions,
+            this.setState({
+                metroData: res.data.Trains
             })
             console.log(this.state.metroData);
         })
@@ -37,20 +54,34 @@ class App extends Component {
 
         There are currently {this.state.metroData.length} trains in service.
 
+        {/* train position */}
+        {/* {this.state.metroData.map(train => {
+            if (train.Line !== null) {
+                return (
+                    <Trains 
+                        key={train.TrainId}
+                        trainId={train.TrainId}
+                        line={train.Line}
+                        destination={train.DestinationStationCode}
+                    />
+                )
+            }
+        })} */}
 
-            {this.state.metroData.map(train => {
-                if (train.LineCode !== null) {
-                    return (
-                        <Trains 
-                            key={train.TrainId}
-                            trainId={train.TrainId}
-                            line={train.LineCode}
-                            destination={train.DestinationStationCode}
-                        />
-                    )
-                }
-
-            })}
+        {/* arrival times */}
+        {this.state.metroData.map((train, index) => {
+            if (train.Line !== null) {
+                return (
+                    <Trains 
+                        key={index}
+                        line={train.Line}
+                        destination={train.DestinationName}
+                        location={train.LocationName}
+                        min={train.Min}
+                    />
+                )
+            }
+        })}
 
       </div>
     );

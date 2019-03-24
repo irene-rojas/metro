@@ -7,16 +7,22 @@ const Trains = (props) => {
     return (
 
         <div className={`train_${props.line}`}>
+
             <img 
                 src={logo} 
                 alt="train" 
             />
             <br/>
-            Train ID: {props.trainId}
-            <br/>
             Line Color: {props.line}
             <br/>
             Destination: {props.destination}
+            <br/>
+            Expected arrival: {props.min} min
+            <br/>
+            You are at {props.location}
+            <br/>
+
+            
         </div>
 
     )
