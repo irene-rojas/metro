@@ -70,9 +70,18 @@ button {
     border-radius: 5px;
 }
 
+.parallax {
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .results {
     grid-column: 1/-1;
     grid-row: 3/4;
+    justify-self: center;
 }
 
 .wmataName {
@@ -84,6 +93,7 @@ button {
     color: white;
     font-size: 8pt;
 }
+
 a {
     color: white;
 }

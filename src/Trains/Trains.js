@@ -5,14 +5,20 @@ const Trains = (props) => {
 
     return (
 
-        <div className={`train train_${props.line}`}>
+        <div className="train">
 
-            <p id="destination">Destination: {props.destination}</p>
+            {/* <div className="card"> */}
 
-            <p id="arrival">Expected arrival: {props.min} min</p>
+                <div className="lineColor" id={props.line}></div>
 
-            <p id="cars">Cars: {props.cars}</p>
-            
+                <p id="destination">Destination: {props.destination}</p>
+
+                <p id="arrival">Expected arrival: {props.min} min</p>
+
+                <p id="cars">Cars: {props.cars}</p>
+        
+            {/* </div> */}
+
         </div>
 
     )
