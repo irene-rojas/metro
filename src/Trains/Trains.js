@@ -1,5 +1,5 @@
 import React from 'react';
-import train from "./train.png";
+import logo from "./logo.png";
 import "./Trains.css";
 
 const Trains = (props) => {
@@ -8,16 +8,15 @@ const Trains = (props) => {
 
         <div className="trains">
             <img 
-                src={train} 
+                src={logo} 
                 alt="train" 
-                width="150px" 
             />
             <br/>
             Train ID: {props.trainId}
             <br/>
             Line Color: {props.line}
             <br/>
-            No line color = out of service.
+            Destination: {props.destination}
         </div>
 
     )
