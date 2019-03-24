@@ -10,6 +10,8 @@ const Trains = (props) => {
             Destination: {props.destination}
             <br/>
             Expected arrival: {props.min} min
+            <br/>
+            Cars: {props.cars}
             
         </div>
 

@@ -29,7 +29,7 @@ class App extends Component {
         .then(res => {
             this.setState({
                 metroData: res.data.Trains
-            })
+            });
             console.log(this.state.metroData);
         })
     }
@@ -39,7 +39,6 @@ class App extends Component {
     return (
       <div className="App">
 
-        {/*  need to block null trains */}
         <div>
             <form>
                 <select value={this.state.selectedStation} onChange={this.onChange}>
@@ -157,8 +156,6 @@ class App extends Component {
 
         </div>
 
-
-
         {/* arrival times */}
         {this.state.metroData.map((train, index) => {
             return (
@@ -168,6 +165,7 @@ class App extends Component {
                     destination={train.DestinationName}
                     location={train.LocationName}
                     min={train.Min}
+                    cars={train.Car}
                 />
             )
         })}
