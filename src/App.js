@@ -39,6 +39,7 @@ class App extends Component {
     return (
       <div className="App">
 
+        {/*  need to block null trains */}
         <div>
             <form>
                 <select value={this.state.selectedStation} onChange={this.onChange}>
@@ -149,7 +150,10 @@ class App extends Component {
 
             <button onClick={this.onSubmit}>Submit</button>
                 <br/>
-            Note: Metro API might not display arrival information for final stations.
+            <div id="apiNote">Note: May not display arrival information for final stations. 
+                <br/>
+                This is a known issue with the WMATA API.
+            </div>
 
         </div>
 
