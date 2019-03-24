@@ -42,11 +42,9 @@ class App extends Component {
 
         <div className="header">
 
-            <h1 className="whereTrain">Where's The Train?</h1>
-
             <a href="https://www.wmata.com/"><img id="metroLogo" src={logo} alt="wmata logo"/></a>
 
-            
+            <h1 className="whereTrain">Where's The Train?</h1>
 
         </div>
 
@@ -164,6 +162,7 @@ class App extends Component {
         </div>
 
         {/* arrival times */}
+        <div className="results">
         {this.state.metroData.map((train, index) => {
             return (
                 <Trains 
@@ -177,14 +176,13 @@ class App extends Component {
                 />
             )
         })}
+        </div>
 
-
-        <p id="wmataName">Washington Metropolitan Area Transit Authority
+        <div className="wmataName">
+            Washington Metropolitan Area Transit Authority
             <br/>
             Powered by <a href="https://developer.wmata.com/">WMATA API</a>
-        </p>
-
-
+        </div>
 
       </div>
     );
