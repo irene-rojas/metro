@@ -6,7 +6,7 @@ const Trains = (props) => {
 
     return (
 
-        <div className="trains">
+        <div className={`train_${props.line}`}>
             <img 
                 src={logo} 
                 alt="train" 

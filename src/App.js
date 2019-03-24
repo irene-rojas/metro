@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from "axios";
 import Trains from "./Trains/Trains";
-import stations from "./stations.json";
 
 class App extends Component {
 
     state = {
         metroData: [],
     }
+
+    // componentDidMount() {
+    //     this.callMetro();
+    // }
 
     callMetro = () => {
         axios.get('https://api.wmata.com/TrainPositions/TrainPositions?contentType=json', {
@@ -30,6 +33,10 @@ class App extends Component {
       <div className="App">
 
         <button onClick={this.callMetro}>Submit</button>
+        <br/>
+
+        There are currently {this.state.metroData.length} trains running.
+
 
             {this.state.metroData.map(train => {
                 if (train.LineCode !== null) {
