@@ -35,7 +35,7 @@ class App extends Component {
         <button onClick={this.callMetro}>Submit</button>
         <br/>
 
-        There are currently {this.state.metroData.length} trains running.
+        There are currently {this.state.metroData.length} trains in service.
 
 
             {this.state.metroData.map(train => {
