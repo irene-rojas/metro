@@ -54,33 +54,17 @@ class App extends Component {
 
         There are currently {this.state.metroData.length} trains in service.
 
-        {/* train position */}
-        {/* {this.state.metroData.map(train => {
-            if (train.Line !== null) {
-                return (
-                    <Trains 
-                        key={train.TrainId}
-                        trainId={train.TrainId}
-                        line={train.Line}
-                        destination={train.DestinationStationCode}
-                    />
-                )
-            }
-        })} */}
-
         {/* arrival times */}
         {this.state.metroData.map((train, index) => {
-            if (train.Line !== null) {
-                return (
-                    <Trains 
-                        key={index}
-                        line={train.Line}
-                        destination={train.DestinationName}
-                        location={train.LocationName}
-                        min={train.Min}
-                    />
-                )
-            }
+            return (
+                <Trains 
+                    key={index}
+                    line={train.Line}
+                    destination={train.DestinationName}
+                    location={train.LocationName}
+                    min={train.Min}
+                />
+            )
         })}
 
       </div>
