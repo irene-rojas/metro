@@ -144,15 +144,15 @@ class App extends Component {
                     <option value="N04">Spring Hill</option>
                     <option value="N06">Wiehle-Reston East</option>
 
-
-
-
                 </select>
             </form>
 
             <button onClick={this.onSubmit}>Submit</button>
+                <br/>
+            Metro API might not display arrival information for final stations.
 
         </div>
+
 
 
         {/* arrival times */}
@@ -167,8 +167,6 @@ class App extends Component {
                 />
             )
         })}
-
-
 
       </div>
     );
