@@ -7,17 +7,23 @@ const Trains = (props) => {
 
         <div className={`train train_${props.line}`}>
 
-                <div id="destination">Destination:
+                <div id="destination">
+                    Destination:
                     <br/>
-                    {props.destination}</div>
+                    {props.destination}
+                </div>
 
-                <div id="arrival">Arrival:
+                <div id="arrival">
+                    Arrival:
                     <br/>
-                    {props.min} min</div>
+                    {props.min} min
+                </div>
 
-                <div id="cars">Cars:
+                <div id="cars">
+                    Cars:
                     <br/>
-                    {props.cars}</div>
+                    {props.cars}
+                </div>
         
 
         </div>

@@ -43,8 +43,6 @@ h1 {
     grid-row: 1/2;
 }
 
-
-
 .stations {
     /* in App */
     grid-column: 1/-1;
@@ -72,14 +70,6 @@ button {
     padding: 5px;
 }
 
-.parallax {
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .results {
     grid-column: 1/-1;
     grid-row: 3/4;
@@ -88,7 +78,6 @@ button {
 }
 
 .wmataName {
-    font-size: 12pt;
     /* in App */
     grid-column: 1/-1;
     grid-row: 4/-1;

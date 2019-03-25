@@ -158,29 +158,25 @@ class App extends Component {
 
             <button onClick={this.onSubmit}>Submit</button>
 
-
         </div>
 
 
-        {/* <div className="parallax"> */}
-
-            {/* arrival times */}
-            <div className="results">
-            {this.state.metroData.map((train, index) => {
-                return (
-                    <Trains 
-                        className="trainArrivals"
-                        key={index}
-                        line={train.Line}
-                        destination={train.DestinationName}
-                        location={train.LocationName}
-                        min={train.Min}
-                        cars={train.Car}
-                    />
-                )
-            })}
+        {/* arrival times */}
+        <div className="results">
+        {this.state.metroData.map((train, index) => {
+            return (
+                <Trains 
+                    className="trainArrivals"
+                    key={index}
+                    line={train.Line}
+                    destination={train.DestinationName}
+                    location={train.LocationName}
+                    min={train.Min}
+                    cars={train.Car}
+                />
+            )
+        })}
             </div>
-        {/* </div>   */}
 
         <div className="wmataName">
             Powered by <a href="https://developer.wmata.com/">WMATA API</a>
