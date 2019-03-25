@@ -76,6 +76,14 @@ button {
     grid-row: 3/4;
     justify-self: center;
     padding-top: 10px;
+    /* in results */
+    display: grid;
+    grid-template-columns: 40px repeat(3, 1fr) 40px;
+    grid-template-rows: 1fr;
+}
+
+.resultsInner {
+    grid-column: 2/span 3;
 }
 
 .wmataName {
