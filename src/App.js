@@ -42,14 +42,9 @@ class App extends Component {
 
         <div className="header">
 
-            <div className="whereTrain">
-                <h1>Where's The Train?</h1>
-            </div>
+            <a href="https://www.wmata.com/"><img id="metroLogo" src={logo} alt="wmata logo"/></a>
 
-            <div className="logo">
-                <img id="metroLogo" src={logo} alt="wmata logo"/>
-                Washington Metropolitan Area Transit Authority
-            </div>
+            <h1 className="whereTrain">Where's The Train?</h1>
 
         </div>
 
@@ -153,10 +148,6 @@ class App extends Component {
 
                 </select>
                 <br/>
-
-                <button onClick={this.onSubmit}>Submit</button>
-
-                <br/>
                 <div id="apiNote">
                     Note: May not display arrival information for final stations. 
                     <br/>
@@ -165,22 +156,31 @@ class App extends Component {
 
             </form>
 
+            <button onClick={this.onSubmit}>Submit</button>
 
         </div>
 
+
         {/* arrival times */}
-        {this.state.metroData.map((train, index) => {
-            return (
-                <Trains 
-                    key={index}
-                    line={train.Line}
-                    destination={train.DestinationName}
-                    location={train.LocationName}
-                    min={train.Min}
-                    cars={train.Car}
-                />
-            )
-        })}
+        <div className="results">
+            {this.state.metroData.map((train, index) => {
+                return (
+                    <Trains 
+                        className="trainArrivals"
+                        key={index}
+                        line={train.Line}
+                        destination={train.DestinationName}
+                        location={train.LocationName}
+                        min={train.Min}
+                        cars={train.Car}
+                    />
+                )
+            })}
+        </div>
+
+        <div className="wmataName">
+            Powered by <a href="https://developer.wmata.com/">WMATA API</a>
+        </div>
 
       </div>
     );
