@@ -1,21 +1,15 @@
 .train {
-    border: 1px solid black;
-    width: 250px;
-    height: auto;
+    width: auto;
     border-radius: 25px;
-    padding: 10px;
     display: grid;
-    grid-template-columns: 30px repeat(3, 1fr);
-    grid-template-rows: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
     justify-self: center;
+    font-size: 16px;
     background-color: white;
-}
-
-.lineColor {
-    grid-column: 1/2;
-    grid-row: 1/-1;
-    justify-self: center;
-    margin: 10px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    font-family: "Helvetica Neue";
 }
 
 p {
@@ -23,61 +17,45 @@ p {
 }
 
 #destination {
-    grid-column: 2/3;
+    grid-column: 1/2;
     grid-row: 1/-1;
     padding: 5px;
 }
 
 #arrival {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    padding: 5px;
+    border-left: 0.5px solid #3e3e3e;
+    border-right: 0.5px solid #3e3e3e;
+}
+
+#cars {
     grid-column: 3/4;
     grid-row: 1/-1;
     padding: 5px;
 }
 
-#cars {
-    grid-column: 4/5;
-    grid-row: 1/-1;
-    padding: 5px;
+.train_BL {
+    border: 10px solid #007bc0;
 }
 
-#BL {
-    background-color: #007bc0;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
+.train_RD {
+    border: 10px solid #e33144;
 }
 
-#RD {
-    background-color: #e33144;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
+.train_YL {
+    border: 10px solid #fed225;
 }
 
-#YL {
-    background-color: #fed225;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
+.train_GR {
+    border: 10px solid #00ab57;
 }
 
-#GR {
-    background-color: #00ab57;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
+.train_OR {
+    border: 10px solid #f79631;
 }
 
-#OR {
-    background-color: #f79631;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
-}
-
-#SV {
-    background-color: #a3a5a2;
-    border-radius: 50%;
-    height: 25px;
-    width: 25px;
+.train_SV {
+    border: 10px solid #a3a5a2;
 }
