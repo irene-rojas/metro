@@ -42,9 +42,9 @@ class App extends Component {
 
         <div className="header">
 
-            <a href="https://www.wmata.com/"><img id="metroLogo" src={logo} alt="wmata logo"/></a>
-
             <h1 className="whereTrain">Where's The Train?</h1>
+            <br/>
+            <p className="infoGuide">A guide for navigating DC Metrorail</p>
 
         </div>
 
@@ -53,7 +53,7 @@ class App extends Component {
             <form className="stationSelect">
                 <select className="dropdown" value={this.state.selectedStation} onChange={this.onChange}>
 
-                    <option>Select A WMATA Station</option>
+                    <option>Select A Station</option>
                     <option value="G03">Addison Road-Seat Pleasant</option>
                     <option value="F06">Anacostia</option>
                     <option value="F02">Archives-Navy Memorial-Penn Quarter</option>
@@ -180,8 +180,12 @@ class App extends Component {
                 </div>
             </div>
 
-        <div className="wmataName">
-            Powered by <a href="https://developer.wmata.com/">WMATA API</a>
+        <div className="footer">
+
+            <a href="https://www.wmata.com/"><img id="metroLogo" src={logo} alt="wmata logo"/></a>
+
+            <p id="power">Powered by <a href="https://developer.wmata.com/">WMATA API</a></p>
+
         </div>
 
       </div>
