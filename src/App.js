@@ -53,7 +53,7 @@ class App extends Component {
             <form className="stationSelect">
                 <select className="dropdown" value={this.state.selectedStation} onChange={this.onChange}>
 
-                    <option>Select A WMATA Station</option>
+                    <option>Select A Station</option>
                     <option value="G03">Addison Road-Seat Pleasant</option>
                     <option value="F06">Anacostia</option>
                     <option value="F02">Archives-Navy Memorial-Penn Quarter</option>
