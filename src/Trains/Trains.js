@@ -25,7 +25,6 @@ const Trains = (props) => {
                     {props.cars}
                 </div>
         
-
         </div>
 
     )

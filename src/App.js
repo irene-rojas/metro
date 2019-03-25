@@ -41,15 +41,12 @@ class App extends Component {
       <div className="App">
 
         <div className="header">
-
             <h1 className="whereTrain">Where's The Train?</h1>
             <br/>
             <p className="infoGuide">A guide for navigating DC Metrorail</p>
-
         </div>
 
         <div className="stations">
-
             <form className="stationSelect">
                 <select className="dropdown" value={this.state.selectedStation} onChange={this.onChange}>
 
@@ -153,39 +150,34 @@ class App extends Component {
                     <br/>
                     This is a known issue with the WMATA API.
                 </div>
-
             </form>
 
             <button onClick={this.onSubmit}>Submit</button>
 
         </div>
 
-
-            {/* arrival times */}
-            <div className="results">
-                <div className="resultsInner">
-                {this.state.metroData.map((train, index) => {
-                    return (
-                        <Trains 
-                            className="trainArrivals"
-                            key={index}
-                            line={train.Line}
-                            destination={train.DestinationName}
-                            location={train.LocationName}
-                            min={train.Min}
-                            cars={train.Car}
-                        />
-                    )
-                })}
-                </div>
+        <div className="results">
+            <div className="resultsInner">
+            {this.state.metroData.map((train, index) => {
+                return (
+                    <Trains 
+                        className="trainArrivals"
+                        key={index}
+                        line={train.Line}
+                        destination={train.DestinationName}
+                        location={train.LocationName}
+                        min={train.Min}
+                        cars={train.Car}
+                    />
+                )
+            })}
             </div>
+        </div>
 
         <div className="footer">
-
             <a href="https://www.wmata.com/"><img id="metroLogo" src={logo} alt="wmata logo"/></a>
 
             <p id="power">Powered by <a href="https://developer.wmata.com/">WMATA API</a></p>
-
         </div>
 
       </div>
