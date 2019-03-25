@@ -161,22 +161,24 @@ class App extends Component {
         </div>
 
 
-        {/* arrival times */}
-        <div className="results">
-            {this.state.metroData.map((train, index) => {
-                return (
-                    <Trains 
-                        className="trainArrivals"
-                        key={index}
-                        line={train.Line}
-                        destination={train.DestinationName}
-                        location={train.LocationName}
-                        min={train.Min}
-                        cars={train.Car}
-                    />
-                )
-            })}
-        </div>
+            {/* arrival times */}
+            <div className="results">
+                <div className="resultsInner">
+                {this.state.metroData.map((train, index) => {
+                    return (
+                        <Trains 
+                            className="trainArrivals"
+                            key={index}
+                            line={train.Line}
+                            destination={train.DestinationName}
+                            location={train.LocationName}
+                            min={train.Min}
+                            cars={train.Car}
+                        />
+                    )
+                })}
+                </div>
+            </div>
 
         <div className="wmataName">
             Powered by <a href="https://developer.wmata.com/">WMATA API</a>
