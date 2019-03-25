@@ -76,6 +76,7 @@ button {
     grid-row: 3/4;
     justify-self: center;
     padding-top: 10px;
+    width: 100%;
 }
 
 .wmataName {
