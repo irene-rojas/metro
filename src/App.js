@@ -144,15 +144,15 @@ class App extends Component {
                     <option value="A04">Woodley Park-Zoo/Adams Morgan</option>
 
                 </select>
-                <br/>
-                <div id="apiNote">
+            </form>
+
+            <button onClick={this.onSubmit}>Submit</button>
+            <br/>
+            <div id="apiNote">
                     Note: May not display arrival information for final stations. 
                     <br/>
                     This is a known issue with the WMATA API.
                 </div>
-            </form>
-
-            <button onClick={this.onSubmit}>Submit</button>
 
         </div>
 
