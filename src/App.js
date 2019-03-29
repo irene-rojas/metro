@@ -59,7 +59,7 @@ class App extends Component {
                     <option value="G01">Benning Road</option>
                     <option value="A09">Bethesda</option>
                     <option value="C12">Braddock Road</option>
-                    <option value="F11">Branch Ave</option>
+                    <option value="F11">Branch Ave (Final Station)</option>
                     <option value="B05">Brookland-CUA</option>
                     <option value="G02">Capitol Heights</option>
                     <option value="D05">Capitol South</option>
@@ -83,21 +83,21 @@ class App extends Component {
                     <option value="D01">Federal Triangle</option>
                     <option value="C04">Foggy Bottom-GWU</option>
                     <option value="B09">Forest Glen</option>
-                    <option multiple={true} value={["B06","E06"]}>Fort Totten</option>
-                    <option value="J03">Franconia-Springfield</option>
+                    <option multiple={true} value={["B06","E06"]}>Fort Totten (Final Station - Yellow)</option>
+                    <option value="J03">Franconia-Springfield (Final Station - Blue)</option>
                     <option value="A08">Friendship Heights</option>
                     <option multiple={true} value={["B01","F01"]}>Gallery Pl-Chinatown</option>
                     <option value="E05">Georgia Ave-Petworth</option>
-                    <option value="B11">Glenmont</option>
-                    <option value="E10">Greenbelt</option>
+                    <option value="B11">Glenmont (Final Station - Red)</option>
+                    <option value="E10">Greenbelt (Final Station - Green)</option>
                     <option value="N03">Greensboro</option>
                     <option value="A11">Grosvenor-Strathmore</option>
-                    <option value="C15">Huntington</option>
+                    <option value="C15">Huntington (Final Station - Yellow)</option>
                     <option value="B02">Judiciary Square</option>
                     <option value="C13">King St-Old Town</option>
                     <option multiple={true} value={["D03","F03"]}>L'Enfant Plaza</option>
                     <option value="D12">Landover</option>
-                    <option value="G05">Largo Town Center</option>
+                    <option value="G05">Largo Town Center (Final Station - Blue, Silver)</option>
                     <option value="N01">McLean</option>
                     <option value="C02">McPherson Square</option>
                     <option value="A10">Medical Center</option>
@@ -107,7 +107,7 @@ class App extends Component {
                     <option value="E01">Mt Vernon Sq 7th St-Convention Center</option>
                     <option value="F05">Navy Yard-Ballpark</option>
                     <option value="F09">Naylor Road</option>
-                    <option value="D13">New Carrollton</option>
+                    <option value="D13">New Carrollton (Final Station - Orange)</option>
                     <option value="B35">NoMa-Gallaudet U</option>
                     <option value="C07">Pentagon</option>
                     <option value="C08">Pentagon City</option>
@@ -117,7 +117,7 @@ class App extends Component {
                     <option value="A14">Rockville</option>
                     <option value="C10">Ronald Reagan Washington National Airport</option>
                     <option value="C05">Rosslyn</option>
-                    <option value="A15">Shady Grove</option>
+                    <option value="A15">Shady Grove (Final Station - Red)</option>
                     <option value="E02">Shaw-Howard U</option>
                     <option value="B08">Silver Spring</option>
                     <option value="D02">Smithsonian</option>
@@ -133,14 +133,14 @@ class App extends Component {
                     <option value="B03">Union Station</option>
                     <option value="J02">Van Dorn Street</option>
                     <option value="A06">Van Ness-UDC</option>
-                    <option value="K08">Vienna/Fairfax-GMU</option>
+                    <option value="K08">Vienna/Fairfax-GMU (Final Station - Orange)</option>
                     <option value="K03">Virginia Square-GMU</option>
                     <option value="F04">Waterfront</option>
                     <option value="K06">West Falls Church-VT/UVA</option>
                     <option value="E07">West Hyattsville</option>
                     <option value="B10">Wheaton</option>
                     <option value="A12">White Flint</option>
-                    <option value="N06">Wiehle-Reston East</option>
+                    <option value="N06">Wiehle-Reston East (Final Station - Silver)</option>
                     <option value="A04">Woodley Park-Zoo/Adams Morgan</option>
 
                 </select>
