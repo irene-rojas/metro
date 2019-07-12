@@ -1,0 +1,15 @@
+{
+  "main.css": "/metro/static/css/main.b23449c5.chunk.css",
+  "main.js": "/metro/static/js/main.ee6f38b4.chunk.js",
+  "main.js.map": "/metro/static/js/main.ee6f38b4.chunk.js.map",
+  "runtime~main.js": "/metro/static/js/runtime~main.48b50b14.js",
+  "runtime~main.js.map": "/metro/static/js/runtime~main.48b50b14.js.map",
+  "static/js/2.11ffe6a8.chunk.js": "/metro/static/js/2.11ffe6a8.chunk.js",
+  "static/js/2.11ffe6a8.chunk.js.map": "/metro/static/js/2.11ffe6a8.chunk.js.map",
+  "index.html": "/metro/index.html",
+  "precache-manifest.9fe34b341a57945722ab4cf51704299e.js": "/metro/precache-manifest.9fe34b341a57945722ab4cf51704299e.js",
+  "service-worker.js": "/metro/service-worker.js",
+  "static/css/main.b23449c5.chunk.css.map": "/metro/static/css/main.b23449c5.chunk.css.map",
+  "static/media/logo.png": "/metro/static/media/logo.12a2e3e2.png",
+  "static/media/App.css": "/metro/static/media/metro_map.acaebabb.jpg"
+}
