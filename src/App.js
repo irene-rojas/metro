@@ -38,13 +38,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <main className="App">
 
-        <div className="header">
+        <header className="header">
             <h1 className="whereTrain">Where's The Train?</h1>
             <br/>
             <p className="infoGuide">A guide for navigating DC Metrorail</p>
-        </div>
+        </header>
 
         <div className="stations">
             <form className="stationSelect">
@@ -149,14 +149,14 @@ class App extends Component {
             <button onClick={this.onSubmit}>Submit</button>
             <br/>
             <div id="apiNote">
-                    Note: May not display arrival information for final stations. 
-                    <br/>
-                    This is a known issue with the WMATA API.
-                </div>
+                Note: May not display arrival information for final stations. 
+                <br/>
+                This is a known issue with the WMATA API.
+            </div>
 
         </div>
 
-        <div className="results">
+        <section className="results">
             <div className="resultsInner">
             {this.state.metroData.map((train, index) => {
                 return (
@@ -172,15 +172,15 @@ class App extends Component {
                 )
             })}
             </div>
-        </div>
+        </section>
 
-        <div className="footer">
+        <footer className="footer">
             <a href="https://www.wmata.com/"><img id="metroLogo" src={logo} alt="wmata logo"/></a>
 
             <p id="power">Powered by <a href="https://developer.wmata.com/">WMATA API</a></p>
-        </div>
+        </footer>
 
-      </div>
+      </main>
     );
   }
 }

@@ -5,7 +5,7 @@ const Trains = (props) => {
 
     return (
 
-        <div className={`train train_${props.line}`}>
+        <figure className={`train train_${props.line}`}>
 
                 <div id="destination">
                     Destination:
@@ -25,7 +25,7 @@ const Trains = (props) => {
                     {props.cars}
                 </div>
         
-        </div>
+        </figure>
 
     )
 
